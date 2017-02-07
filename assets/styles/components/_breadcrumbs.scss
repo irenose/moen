@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------/
+	* WRAPPER
+/* ------------------------------------------------------------------*/
+.breadcrumb-wrapper {
+	background-color: #fff;
+	height: $global-breadcrumb-height;
+}
+
+/* ------------------------------------------------------------------/
+	* BREADCRUMB LINKS
+/* ------------------------------------------------------------------*/
+.breadcrumb-link {
+	@include font-family('DINWebRegular');
+	@include font-size('zeta');
+	line-height: $global-breadcrumb-height;
+
+	&:hover,
+	&.current {
+		color: $color-text-dark;
+	}
+
+	&:after {
+		color: $color-text-light;
+		content: "/";
+		margin-right: 10px;
+		margin-left: 10px;
+		position: relative;
+		top: 1px;
+	}
+
+	&:last-child:after {
+		content: "";
+		display: none;
+	}
+}

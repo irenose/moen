@@ -1,0 +1,94 @@
+.button {
+	cursor: pointer;
+}
+
+button.text {
+	background:transparent none repeat scroll 0 0;
+	border: 0;
+	display:inline;
+	font-size:inherit;
+	line-height:inherit;
+	padding: 0;
+	color: #00A9E0;
+	cursor: pointer;
+	text-align: left;
+}
+
+button.text a:hover {
+	text-decoration: underline;
+}
+
+ul.buttons li {
+	float: left;
+}
+
+a.button,
+button.button,
+span.button {
+	font-family: DINWebBold, Arial, sans-serif;
+}
+
+a.button,
+a.button span.wrap,
+span.button,
+span.button span.wrap,
+ul.buttons a,
+ul.buttons a span.wrap,
+button.button,
+button.button span,
+button.button span.wrap {
+	text-decoration: none;
+}
+
+a.button,
+span.button,
+ul.buttons a,
+button.button {
+	color: #fff;
+	line-height: 21px;
+	font-size: 11px;
+	text-shadow: 0 -1px 1px #777;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+	background-position: right 0;
+	height: 21px;
+	display: inline-block;
+	padding: 0 3px 0 0;
+}
+
+a.button:hover,
+ul.buttons a:hover {
+	text-decoration:none;
+}
+
+a.button.last,
+ul.buttons a.last {
+	margin-right: 0;
+}
+
+a.button span.wrap,
+span.button span.wrap,
+ul.buttons a span.wrap,
+button.button span.wrap,
+button.button span {
+	background-position: left 0;
+	display: block;
+	padding: 0 10px 0 13px;
+	height: 25px; /* new */
+	line-height: 23px; /* new */
+}
+
+button.button {
+	border: 0;
+	padding: 0 3px 0 0;
+	width: auto;
+}
+
+button.button::-moz-focus-inner {
+	padding-right: 0;
+}
+
+button.button span {
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}

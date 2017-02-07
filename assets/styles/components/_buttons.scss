@@ -1,0 +1,91 @@
+.btn {
+  @include font-family("DINWebMedium");
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  padding-top: $btn-padding-top;
+  padding-right: $btn-padding-right;
+  padding-bottom: $btn-padding-bottom;
+  padding-left: $btn-padding-left;
+  line-height: 26px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+  	text-decoration: none;
+  }
+
+  p + &,
+  ul + &,
+  ol + & {
+    margin-top: 2em;
+  }
+}
+
+.btn-primary {
+  background-color: #3ab564;
+  box-shadow: 0 3px 0px 0 #23683B;
+  color: #fff;
+  margin-bottom: 3px;
+
+	&:hover {
+		background-color: #379c59;
+	}
+}
+
+.btn-play {
+  $icon-width: 20px;
+
+  padding-right: ($btn-padding-right + $icon-width);
+  padding-left: ($btn-padding-left * 0.5);
+  position: relative;
+
+  .icon {
+    display: block;
+    height: $icon-width;
+    position: absolute;
+    right: $icon-width;
+    width: $icon-width;
+    top: ($icon-width * 0.5) + 1px;
+  }
+}
+
+.btn-primary.margin-t-10 {
+  margin-top: 10px
+}
+
+.btn-primary.margin-t-20 {
+  margin-top: 20px
+}
+
+.btn-primary.margin-t-30 {
+  margin-top: 40px
+}
+
+.btn-primary.margin-t-40 {
+  margin-top: 40px
+}
+
+.btn-primary.margin-t-50 {
+  margin-top: 50px
+}
+
+.btn-primary.margin-t-60 {
+  margin-top: 60px
+}
+
+.btn-scroll {
+  background-color: #42b35f;
+  border-radius: 50%;
+  bottom: -20px;
+  color: #fff;
+  display: inline-block;
+  height: 52px;
+  left: 49.5%;
+  line-height: 52px;
+  margin-left: -20px;
+  position: absolute;
+  text-align: center;
+	width: 52px;
+  z-index: 1;
+}

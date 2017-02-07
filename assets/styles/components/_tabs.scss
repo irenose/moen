@@ -1,0 +1,232 @@
+.m_tabs {
+  .tab-control {
+    display: block;
+    text-align: center;
+
+    &:hover {
+      transition: background-color 0.5s;
+    }
+  }
+
+  .tab-panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+/********** PILL TABS **********/
+.m_tabs.pill-tabs {
+  .tab-list {
+    text-align: center;
+  }
+
+  .tab-list-item {
+    border-left: 1px solid $color-border-grey-light;
+    border-right: 1px solid $color-border-grey-light;
+    display: inline-block;
+
+    + .tab-list-item {
+      margin-left: -4px;
+    }
+
+    &.tab-list-item:first-child,
+    &.tab-list-item:nth-child(2)
+    {
+      border-right: none;
+    }
+  }
+
+  .tab-control {
+    background-color: $color-border-grey;
+    border: none;
+    color: $color-text-default;
+
+    &.btn {
+      border-radius: 0;
+      padding-top: ($btn-padding-top * 2);
+      padding-bottom: ($btn-padding-bottom * 2);
+    }
+  }
+
+  .tab-list-item.active .tab-control {
+    background-color: $color-primary-blue;
+    color: #fff;
+  }
+}
+
+/********** FOLDER TABS **********/
+.m_tabs.folder-tabs {
+  position: relative;
+  z-index: 10;
+
+  .tab-list {
+    background-color: #ececec;
+    border-left: 1px solid $color-border-grey;
+    border-right: 1px solid $color-border-grey;
+  }
+
+  .tab-list-item {
+    background-color: #ececec;
+    border-right: 1px solid $color-border-grey;
+    border-bottom: 1px solid $color-border-grey;
+    border-left: 1px solid #fff;
+    display: inline-block;
+    float: left;
+    height: $tab-height;
+    width: 33.33%; // limit of 3 tabs
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:nth-child(n+3) {
+      border-right: none;
+    }
+  }
+
+  .tab-control {
+    color: $color-text-default;
+    height: $tab-height;
+
+    &:hover {
+      background-color: $color-border-grey-light;
+    }
+  }
+
+  .tab-list-item.active .tab-control,
+  .tab-list-item.active .tab-control:hover {
+    background-color: #fff;
+  }
+}
+
+/********** FOLDER TAB PANELS **********/
+.m_tabs.folder-tabs {
+  .tab-panel {
+    background-color: #fff;
+    border-right: 1px solid $color-border-grey;
+    border-left: 1px solid $color-border-grey;
+    color: $color-text-default;
+    min-height: $product-image-height;
+    overflow: hidden;
+    padding: $page-row-offset-top ($page-row-offset-top * 0.5);
+    position: relative;
+  }
+
+  .panel-details {
+    float: left;
+    width: 40%;
+  }
+
+  .panel-graphic {
+    float: right;
+    width: 50%;
+  }
+}
+
+/********** SHARED FOLDER TAB / FOLDER TAB PANEL CONTENT **********/
+.m_tabs.folder-tabs {
+  .model-number {
+    @include font-family("DINWebBold");
+    color: $color-text-dark;
+  }
+}
+
+/********** FOLDER TAB CONTENT **********/
+.m_tabs.folder-tabs {
+  .tab-control-content {
+    padding: 30px 50px 0;
+  }
+
+  .tab-list-item {
+    .product-image {
+      height: $product-image-height;
+      line-height: 0;
+      margin-bottom: 15px;
+      position: relative;
+      text-align: center;
+
+      img {
+        @include centerer(true, false);
+        bottom: 0;
+        max-height: $product-image-height;
+      }
+    }
+
+    .model-number {
+      @include font-size("epsilon");
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    .model-name {
+      @include font-family(DINWebLight) ;
+      @include font-size("delta") ;
+      color: $color-text-dark;
+      margin-bottom: 0.25em;
+    }
+
+    .model-use {
+      @include font-family("DINWebLight");
+    }
+
+    &.active .model-number {
+      color: $color-primary-blue;
+    }
+  }
+}
+
+/********** FOLDER TAB PANEL CONTENT **********/
+.m_tabs.folder-tabs {
+  .tab-panel {
+
+    .model-number {
+      @include font-size("zeta");
+    }
+
+    &.active .model-number {
+      color: $color-primary-blue;
+    }
+
+    .model-name {
+      @include font-family("DINWebBold");
+      @include font-size("zeta");
+      color: $color-text-light;
+      text-transform: uppercase;
+    }
+
+    .model-use {
+      @include font-size("gamma");
+      margin-bottom: 1em;
+    }
+  }
+
+  .model-info-heading {
+    @include font-family("DINWebBold");
+    @include font-size("zeta");
+    margin-top: 2.5em;
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+
+    + ul > li:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .panel-details{
+    @include font-family("DINWebLight");
+  }
+
+  .panel-graphic .btn-primary {
+    margin-top: 50px;
+  }
+
+  .note {
+    @include font-family("DINWebBold");
+    @include font-size("zeta");
+    color: $color-text-dark;
+    margin-top: 2em;
+  }
+}

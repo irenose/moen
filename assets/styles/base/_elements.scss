@@ -1,0 +1,114 @@
+html {
+	font-size: 62.5%; /* Sets up Base 10 for rem calculations */
+	width: 100%;
+}
+
+body {
+	@include font-family("DINWebRegular");
+	@include font-size-rem(1.6);
+	color: $color-text-default;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+	line-height: 0;
+	max-width: 100%;
+}
+
+a {
+	color: #00a9e0;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+	border: 0;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+ul {
+	li {
+		margin-top: 20px;
+		padding-left: 1.2em;
+		text-indent: -1.2em;
+
+		&:before {
+			content: "•";
+			color: #ccc;
+	    margin-right: 0.5em;
+		}
+	}
+}
+
+sup {
+	font-size: 0.7em;
+	line-height: 100%;
+	color: #999;
+	vertical-align: top;
+}
+
+sub {
+	font-size: 0.7em;
+	line-height: 100%;
+	color: #999;
+	vertical-align: bottom;
+}
+
+i,
+em,
+dfn,
+cite {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}

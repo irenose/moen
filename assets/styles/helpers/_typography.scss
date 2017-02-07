@@ -1,0 +1,95 @@
+/*--------------------------------------------------------/
+		TYPOGRAPHY | Font Faces
+/*-------------------------------------------------------*/
+@font-face {
+	font-family: 'DINWebRegular';
+	src: url('../fonts/DINWeb.eot');
+	src: url('../fonts/DINWeb.eot?#iefix') format('embedded-opentype');
+	src: local('☺'),
+		url('../fonts/DINWeb.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'DINWebMedium';
+	src: url('../fonts/DINWeb-Medium.eot');
+	src: url('../fonts/DINWeb-Medium.eot?#iefix') format('embedded-opentype');
+	src: local('☺'),
+		url('../fonts/DINWeb-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'DINWebBold';
+	src: url('../fonts/DINWeb-Bold.eot');
+	src: url('../fonts/DINWeb-Bold.eot?#iefix') format('embedded-opentype');
+	src: local('☺'),
+		url('../fonts/DINWeb-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'DINWebLight';
+	src: url('../fonts/DINWeb-Light.eot');
+	src: url('../fonts/DINWeb-Light.eot?#iefix') format('embedded-opentype');
+	src: local('☺'),
+		url('../fonts/DINWeb-Light.woff') format('woff');
+}
+
+/*--------------------------------------------------------/
+		TYPOGRAPHY | Fonts & Phrases
+/*-------------------------------------------------------*/
+.italic {
+	font-style: italic;
+}
+
+.big {
+	font-size: 1.667em;
+}
+
+.medium {
+	font-size: 1.25em;
+}
+
+.small {
+	font-size: .95em;
+	line-height: 1.2em;
+}
+
+ul.small li {
+	margin: 0.5em 0;
+}
+
+.font-weight-med {
+	@include font-family("DINWebMedium");
+}
+
+.make-me-strong {
+	@include font-family("DINWebBold");
+	font-size: 12px;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.capitalize span {
+	text-transform: none;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.mark {
+	font-size: 60%;
+	line-height: 100%;
+	color: #999;
+	font-weight: normal;
+	vertical-align: top;
+}

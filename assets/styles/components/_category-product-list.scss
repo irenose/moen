@@ -1,0 +1,47 @@
+.m_category-product-list {
+	background: $section-cartridges-bg-color;
+}
+
+.category-product-item {
+	border-left: 1px solid $color-border-grey;
+	box-shadow: inset 1px 0px 0px 0px white;
+	height: $category-product-list-height;
+
+	+ .category-product-item {
+		border-right: 1px solid $color-border-grey;
+		position: relative;
+
+		&:after {
+			background-color: #fff;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: 100%;
+			position: absolute;
+			right: -2px;
+			top: 0;
+			width: 1px;
+		}
+	}
+}
+
+.category-product-link {
+	color: $color-text-default;
+	display: block;
+	height: $category-product-list-height;
+	text-align: center;
+
+	.product-name {
+		@include font-family("DINWebRegular");
+		@include font-size("delta");
+		margin-top: -90px;
+	}
+
+	&:hover {
+		border-bottom: 10px solid $color-primary-blue;
+
+		.product-name {
+			color: $color-primary-blue;
+		}
+	}
+}

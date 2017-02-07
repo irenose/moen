@@ -1,0 +1,60 @@
+.m_subnav {
+  background: #fff;
+  border-bottom: 1px solid $color-border-grey-light;
+  height: $subnav-height;
+  position: relative;
+
+  &.is-fixed {
+    border-bottom: none;
+    box-shadow: 0 0 11px 0px rgba(0,0,0,0.7);
+    height: ($subnav-height - 1px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+}
+
+.subnav-item {
+  border-left: 1px solid $color-border-grey-light;
+  float: left;
+  height: ($subnav-height - 1px);
+  width: 25%;
+
+  &:last-child {
+    border-right: 1px solid $color-border-grey-light;
+  }
+}
+
+.subnav-link {
+  @include font-family("DINWebLight");
+  color: $color-text-default;
+  display: block;
+  height: ($subnav-height - 1px);
+  padding: 40px 40px 0;
+  position: relative;
+  text-align: center;
+  transition: color .5s;
+
+  &:hover {
+    color: $color-primary-blue;
+  }
+
+  &:after {
+		content: "";
+		background: #fff;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+
+	&:hover,
+	&.active {
+		&:after {
+			background: $color-primary-blue;
+		}
+	}
+}

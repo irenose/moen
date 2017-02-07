@@ -1,0 +1,33 @@
+.m_product-model-overview {
+  background: #f6f5f5;
+  border: 1px solid $over-view-list-stroke;
+
+  .intro-text {
+    @include font-family("DINWebLight");
+    @include font-size("delta");
+    border-bottom: 1px solid #e1e1e1;
+    color: $color-text-dark;
+    margin: 36px 0 56px 0;
+    padding-bottom: 40px;
+  }
+
+  .model-item {
+    padding: 0 45px 25px;
+  }
+
+  .grid_6 {
+    margin-right: $grid-margin-right - 2;
+  }
+
+  .item-number, 
+  .item-class
+   {
+    @include font-family("DINWebBold");
+    color: $color-primary-blue;
+    margin-bottom: 0.25em;
+  }
+
+  .item-detail {
+    @include font-family("DINWebLight");
+  }
+}

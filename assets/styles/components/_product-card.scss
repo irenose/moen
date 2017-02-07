@@ -1,0 +1,54 @@
+/*
+  All these cards need to be the same height, regardless of whether they have the
+  Motionsense logo or not. This is why the Motionsense logo is position: absolute
+  and is positioned inside of .product-name.
+*/
+
+$motionsense-height: 28px;
+$motionsense-width: 91px;
+
+.m_product-card {
+  background-color: #fff;
+  border: 1px solid $color-border-grey;
+  margin-top: 20px;
+  text-align: center;
+
+  .product-card-content {
+    display: block;
+    padding: 40px;
+  }
+
+  .product-name {
+    @include font-family("DINWebLight");
+    @include font-size("gamma");
+    color: $color-text-default;
+    padding-bottom: $motionsense-height + 5px;
+    position: relative;
+
+    img.logo-motionsense {
+      display: block;
+      height: $motionsense-height;
+      left: 50%;
+      margin-left: -($motionsense-width * 0.5);
+      position: absolute;
+      bottom: 0;
+      width: $motionsense-width;
+    }
+  }
+
+  .product-image {
+    margin: 20px 0;
+  }
+
+  .link-text {
+    @include font-family("DINWebBold");
+    @include font-size("zeta");
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    .chevron {
+      @include font-size("epsilon");
+    }
+  }
+}

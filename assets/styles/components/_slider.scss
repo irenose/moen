@@ -1,0 +1,88 @@
+.tab-slider-wrapper {
+  background: #f3f4f4;
+}
+
+/********** SLIDER **********/
+.m_slider {
+  position: relative;
+  
+  .slider {
+    margin: 0px;
+    position: relative;
+
+    &:after {
+      background: #ebebeb;
+      content: '';
+      height: $tab-height;
+      left: -100%;
+      margin: 0;
+      position: absolute;
+      width: 400%;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  .slide-viewer {
+    border-bottom: 4px solid $color-primary-blue;
+    max-height: 2000px;
+    min-height: 880px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 7s;
+    z-index: 2;
+  }
+
+  .slide-group {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .slide {
+    display: none;
+    height: 100%;
+    position: absolute;
+    transition: height 1s;
+    width: 100%;
+  }
+
+  .slide.active-slide {
+    position: static;
+  }
+
+  .slide:first-child {
+    display: block;
+  }
+}
+
+/********** SLIDER BUTTONS **********/
+.m_slider {
+  .btn-slide {
+    background-color: $color-primary-blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    border: none;
+    height: $tab-height;
+    padding: 0;
+    position: absolute;
+    width: 50px;
+    z-index: 3;
+  }
+
+  .btn-prev {
+    background-image: url('../images/icons/icon-chevron-left.svg');
+    display: none;
+    left: -49px;
+  }
+
+  .btn-next {
+    background-image: url('../images/icons/icon-chevron-right.svg');
+    right: -49px;
+  }
+
+  &.slider-is-disabled .btn-slide {
+    display: none;
+  }
+}

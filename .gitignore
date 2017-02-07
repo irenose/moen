@@ -1,0 +1,5 @@
+.DS_Store
+.sass-cache
+.mp4
+Build/Icon
+Build/Icon/**

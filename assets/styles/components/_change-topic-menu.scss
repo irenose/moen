@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------------/
+	* MENU
+/* ------------------------------------------------------------------*/
+.m_change-topic {
+	background: transparent url('../images/icons/icon-chevron-down.svg') 90.4% 50% no-repeat;
+	background-size: 9px 6px;
+	border-right: 1px solid $color-border-grey-light;
+	border-left: 1px solid $color-border-grey-light;
+	display: block;
+	float: right;
+  margin: 0;
+  position: relative;
+	text-align: left;
+	width: $change-topic-width;
+  z-index: 10;
+
+	.menu-title {
+		@include font-family('DINWebBold');
+		@include font-size('zeta');
+		color: $color-text-dark;
+		cursor: pointer;
+		display: block;
+		height: $global-breadcrumb-height;
+		line-height: $global-breadcrumb-height;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* MENU LIST
+/* ------------------------------------------------------------------*/
+.change-topic-list {
+	background-color: #fff;
+	border-right: 1px solid $color-border-grey-light;
+	border-bottom: 1px solid $color-border-grey-light;
+	border-left: 1px solid $color-border-grey-light;
+	display: none;
+	left: -1px;
+	padding-bottom: 5px;
+	position: absolute;
+	top: $global-breadcrumb-height;
+	width: $change-topic-width;
+
+	.m_change-topic.active &,
+	.m_change-topic:hover & {
+		display: block;
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* LIST ITEMS
+/* ------------------------------------------------------------------*/
+.change-topic-item {
+	display: block;
+  position: relative;
+	width: 100%;
+}
+
+/* ------------------------------------------------------------------/
+	* LIST LINKS
+/* ------------------------------------------------------------------*/
+.change-topic-link {
+	@include font-family('DINWebBold');
+	@include font-size('zeta');
+	color: $color-text-default;
+	display: block;
+	line-height: 18px;
+  padding: 10px 24px;
+
+	&:hover,
+	.change-topic-item.current & {
+		color: $color-primary-blue;
+	}
+}

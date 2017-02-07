@@ -1,0 +1,24 @@
+// _video_instructions.scss
+.m_video-instructions {
+  margin-top: 50px;
+
+  span {
+    width: 100%;
+    display: block;
+
+    &.type_mark_8px {
+      display: inline;
+    }
+  }
+
+  .troubleshooting {
+    @include font-family("DINWebBold");
+    @include font-size("zeta");
+    padding-bottom: 10px;
+  }
+
+  .model-type {
+    @include font-size("zeta");
+    padding-bottom: 25px;
+  }
+}

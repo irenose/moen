@@ -1,0 +1,9 @@
+.intro-header {
+  margin: 0 auto 100px;
+  max-width: 40%;
+
+  .heading {
+    @include font-family("DINWebLight");
+    @include font-size("beta");
+  }
+}

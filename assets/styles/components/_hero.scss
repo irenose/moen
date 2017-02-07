@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------------/
+	* HERO
+/* ------------------------------------------------------------------*/
+.hero {
+	@include font-family("DINWebLight");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 480px;
+	position: relative;
+
+	.subheading {
+		@include font-family("DINWebBold");
+		@include font-size("zeta");
+		color: $color-primary-blue;
+		text-transform: uppercase;
+	}
+
+	.heading {
+		@include font-family("DINWebLight");
+		@include font-size("beta");
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* HERO | PRODUCT CATEGORY
+/* ------------------------------------------------------------------*/
+.hero-product-category {
+	@extend %stone-bg;
+	padding-top: $page-row-offset-top;
+	padding-bottom: $page-row-offset-bottom;
+	text-align: center;
+
+	.heading {
+		@include font-size("alpha-jumbo");
+	}
+
+	p {
+		@include font-size-rem(1.8);
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* HERO | PRODUCT SUBCATEGORY
+/* ------------------------------------------------------------------*/
+.hero-product-subcategory {
+	@extend %stone-bg;
+	overflow: hidden;
+
+	.page-row {
+		position: relative;
+	}
+
+	.subheading {
+		padding-top: 20px;
+	}
+
+	.heading {
+		@include font-size("alpha");
+	}
+
+	.product-image {
+		float: right;
+		margin-right: $grid-margin-right;
+
+		&.product-image-cutoff {
+			bottom: 0;
+			float: none;
+			line-height: 0;
+			margin-right: 0;
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* HERO | PRODUCT OVERVIEW
+/* ------------------------------------------------------------------*/
+.hero-product-overview {
+	.product-image {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/* ------------------------------------------------------------------/
+	* HERO | OVERLAYED ON A DARK BACKGROUND
+/* ------------------------------------------------------------------*/
+.hero-overlay-dark-bg {
+	color: #fff;
+}

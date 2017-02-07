@@ -1,0 +1,43 @@
+.section-ready-to-test{
+	background: url('../images/backgrounds/dark-grey-gradient.jpg') no-repeat center top;
+	background-size:cover;
+}
+
+.ready-to-test{
+	color:#fff;
+
+	height:495px;
+
+	.icon{
+		margin-left: auto;
+	  margin-right: auto;
+	  display: block;
+		opacity:.2;
+		text-align:center;
+		height:55px;
+		width:55px;
+		float:left;
+		width:100%;
+		margin-top:80px;
+	}
+
+	.intro-text{
+		@include font-family("DINWebLight");
+		color:#fff;
+		font-size:36px;
+		text-align:center;
+	}
+
+	p.squeeze-32{
+		@include font-family("DINWebLight");
+		font-size:16px;
+		padding-top:20px;
+	    color:#c9c8c8;
+	    line-height:21px;
+	}
+
+	.button-wrap{
+		margin-top:32px;
+		text-align:center;
+	}
+}

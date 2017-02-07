@@ -1,0 +1,107 @@
+ul.unstyled,
+ol.unstyled {
+	li {
+		margin: 0;
+		padding: 0;
+		text-indent: initial;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+ul.indented-list,
+ul.bulleted-list,
+ol.decimal,
+ol.lower-roman {
+	margin-bottom: 10px;
+}
+
+ul.indented-list li,
+ul.bulleted-list li,
+ol.decimal li,
+ol.lower-alpha li,
+ol.upper-alpha li,
+ol.lower-roman li,
+ol.upper-roman li {
+	margin-left: 3em;
+	padding-left: 0em;
+}
+
+ul.bulleted-list li {
+	list-style-type: disc;
+}
+
+ol.decimal li {
+	list-style-type: decimal;
+}
+
+ol.lower-roman li {
+	list-style-type: lower-roman;
+}
+
+ol.upper-roman li {
+	list-style-type: upper-roman;
+}
+
+ol.lower-alpha li {
+	list-style-type: lower-alpha;
+}
+
+ol.upper-alpha li {
+	list-style-type: upper-alpha;
+}
+
+/*********************************************************
+Floats
+**********************************************************/
+ul.float-left li {
+	float: left;
+}
+
+ul.float-right li {
+	float: right;
+}
+
+ul.float-right.floated-left li {
+	float: left;
+}
+
+ul.float-left li.float-right {
+	float: right;
+}
+
+ul.float-right li.float-left {
+	float: left;
+}
+
+ul.checked li, .check {
+  padding-left: 24px;
+}
+
+/*********************************************************
+White Bullets
+**********************************************************/
+
+ol.white_bulleted {}
+
+ol.white_bulleted li {
+min-height: 45px;
+}
+
+ol.white_bulleted .bullet {
+color: #636363;
+font-size: 18px;
+line-height: 45px;
+text-align: center;
+height: 45px;
+width: 44px;
+display: block;
+float: left;
+margin-right: 10px;
+}
+
+ol.white_bulleted .content {
+float: left;
+}
